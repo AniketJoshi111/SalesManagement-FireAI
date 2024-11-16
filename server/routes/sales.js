@@ -4,7 +4,7 @@ const Sales = require("../models/Sales");
 const router = express.Router();
 
 //POST /sales
-router.post("/", auth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { productName, amount, DateofSale, status } = req.body;
     const sale = new Sales({
